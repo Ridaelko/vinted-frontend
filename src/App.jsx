@@ -41,12 +41,8 @@ const App = () => {
       <Header data={data} />
       <main>
         <article>
-          {data.offers.map((pictures) => {
-            {
-              pictures.product_pictures.map((pic) => {
-                <img src={pic.secure_url} alt="" />;
-              });
-            }
+          {data.offers.map((owner) => {
+            <p>{owner.account.username} </p>;
           })}
         </article>
       </main>
