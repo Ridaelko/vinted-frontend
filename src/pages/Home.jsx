@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom";
+// const Home = ({ data }) => {
+//   return (
+//     <>
+//       <div className="sold">
+//         <article>
+//           {data.offers.map((owner) => {
+//             <p>{owner.account.username} </p>;
+//           })}
+//         </article>
+//       </div>
+//     </>
+//   );
+// };
 
-const Home = () => {
-  return (
-    <>
-      {" "}
-      <h1>Je suis Home</h1>
-      <Link to="/offer">Offer par ici</Link>
-    </>
-  );
-};
-
-export default Home;
+// export default Home;
