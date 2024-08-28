@@ -40,11 +40,34 @@ const App = () => {
     <>
       <Header data={data} />
       <main>
-        <article>
-          {data.offers.map((owner) => {
-            <p>{owner.account.username} </p>;
-          })}
-        </article>
+        <div className="container">
+          <article>
+            {data.offers.map((offer) => {
+              return (
+                <div className="offer">
+                  <div className="owner">
+                    <img src={offer.owner.account.avatar.url} alt="" />
+                    <p>{offer.owner.account.username} </p>
+                  </div>
+                  <img
+                    className="picture-article"
+                    src={offer.product_image.url}
+                    alt=""
+                  />
+                  <p className="price">{offer.product_price}€ </p>
+                  {offer.product_details.map((details) => {
+                    return (
+                      <div className="details">
+                        <p className="marque">{details.MARQUE}</p>{" "}
+                        <p>{details.TAILLE} </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </article>
+        </div>
       </main>
     </>
   );
