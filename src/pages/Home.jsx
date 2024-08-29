@@ -34,7 +34,10 @@ const Home = () => {
               return (
                 <div className="offer">
                   <div className="owner">
-                    <img src={offer.owner.account.avatar.url} alt="" />
+                    <img
+                      src={offer.owner.account.avatar.url}
+                      alt={offer.owner.account.username}
+                    />
                     <p>{offer.owner.account.username} </p>
                   </div>
                   <img

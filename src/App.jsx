@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // IMPORT DE PAGES
 import Home from "./pages/Home";
+import Signup from "./pages/Signup";
 
 // IMPORT DES COMPONENTS
 import Header from "./components/Header";
@@ -16,6 +17,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
     </>
