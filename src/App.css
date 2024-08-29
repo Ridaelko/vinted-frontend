@@ -91,3 +91,71 @@ article {
 .marque {
   margin-bottom: 6px;
 }
+
+/* =========================SIGNUP========================================== */
+
+.sign-form {
+  width: 275px;
+  margin: 0 auto;
+}
+
+.sign-form h1 {
+  font-size: 24px;
+  margin-bottom: 35px;
+  margin-top: 60px;
+}
+
+input {
+  margin-bottom: 30px;
+  border-color: transparent;
+  border-bottom: 1px solid red;
+  font-size: 18px;
+  width: 275px;
+}
+
+::placeholder {
+  color: #cecfd0;
+}
+
+sign-h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+
+.checkbox label {
+  color: #666666;
+  font-size: 16px;
+}
+
+.checkbox input {
+  width: 21px;
+  height: 21px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.checkbox input:hover {
+  cursor: pointer;
+  border-width: 20px;
+}
+
+form p {
+  color: #999999;
+  font-size: 12px;
+  margin-bottom: 45px;
+}
+
+form button {
+  width: 275px;
+  height: 45px;
+  background-color: #2cb1ba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
