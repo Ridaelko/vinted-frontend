@@ -18,6 +18,7 @@
 
 .white-but {
   border-color: #2cb1ba;
+
   border-radius: 5px;
   background-color: white;
   color: #2cb1ba;
@@ -27,7 +28,7 @@
 }
 
 .blue-but {
-  border-color: #2cb1ba;
+  border: none;
   border-radius: 5px;
   background-color: #2cb1ba;
   color: white;
@@ -117,7 +118,7 @@ input {
   color: #cecfd0;
 }
 
-sign-h1 {
+.sign-h1 {
   display: flex;
   justify-content: center;
 }

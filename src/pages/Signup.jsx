@@ -1,14 +1,24 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 
 const Signup = () => {
-  //   const [data, setData] = useState(Cookies.get("token") || "");
+  const [data, setData] = useState(Cookies.get("token") || "");
 
-  //   const handleSubmit = () => {
-  //     axios.post("https://lereacteur-vinted-api.herokuapp.com/user/signup");
-  //     Cookies.set("token", data.token);
-  //   };
+  const handleSubmit = () => {
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = axios.get(
+            "https://lereacteur-vinted-api.herokuapp.com/user/signup"
+          );
+          Cookies.set("token", token);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }, []);
+  };
 
   return (
     <div className="sign-form">
