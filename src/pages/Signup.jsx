@@ -1,24 +1,49 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-  const [data, setData] = useState(Cookies.get("token") || "");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [newsletter, setNewsletter] = useState(false);
 
-  const handleSubmit = () => {
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = axios.get(
-            "https://lereacteur-vinted-api.herokuapp.com/user/signup"
-          );
-          setData(response.data);
-          Cookies.set("token", response.data.token);
-        } catch (error) {
-          console.log(error);
+  // CE STATE SERT A GERER LES ERREUR DANS LE CATCH
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    setError(""); // on fait disparaître une éventuelle erreur
+    try {
+      const response = await axios.post(
+        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+
+        {
+          username: username,
+          email: email,
+          password: password,
+          newsletter: newsletter,
         }
-      };
-    }, []);
+      );
+      // console.log(response.data.token);
+
+      Cookies.set("vinted-token", response.data.token);
+
+      navigate("/");
+    } catch (error) {
+      console.log("error ===>", error);
+      if (error.response.status === 409) {
+        setErrorMessage("Cet email est déjà utilisé");
+      } else if (error.response.data.message === "Missing parameters") {
+        setErrorMessage("Veuillez remplir tous les champs");
+      } else {
+        setErrorMessage("Une erreur est survenue, veuillez réessayer");
+      }
+    }
   };
 
   return (
@@ -27,11 +52,38 @@ const Signup = () => {
         <h1>S'inscrire</h1>
       </div>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Nom d'utilisateur" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Mot de passe" />
+        <input
+          type="text"
+          placeholder="Nom d'utilisateur"
+          value={username}
+          onChange={(event) => {
+            setUsername(event.target.value);
+          }}
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(event) => {
+            setEmail(event.target.value);
+          }}
+        />
+        <input
+          type="password"
+          placeholder="Mot de passe"
+          value={password}
+          onChange={(event) => {
+            setPassword(event.target.value);
+          }}
+        />
         <div className="checkbox">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            value={newsletter}
+            onChange={() => {
+              setNewsletter(!newsletter);
+            }}
+          />
           <label>S'inscrire à notre newsletter</label>
         </div>
         <p>
@@ -41,6 +93,7 @@ const Signup = () => {
         </p>
         <button type="submit">S'inscrire</button>
       </form>
+      {errorMessage && <p style={{ color: red }}>{error.message} </p>}
       {/* <Link to="/login" >Tu as déjà un compte ? Connecte-toi !</Link> */}
     </div>
   );
