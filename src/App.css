@@ -52,7 +52,7 @@ img {
   margin: 0 auto;
 }
 
-article {
+.container {
   font-size: 12px;
   display: flex;
   gap: 12px;
@@ -91,6 +91,38 @@ article {
 
 .marque {
   margin-bottom: 6px;
+}
+
+/* ===============================================OFFER======================================= */
+
+.offers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offers > img {
+  width: 400px;
+}
+
+.description {
+  width: 400px;
+  border: 1px solid black;
+  padding: 40px;
+}
+
+.description > p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.key {
+  display: flex;
+
+  gap: 150px;
+}
+
+.marques {
+  width: 100px;
 }
 
 /* =========================SIGNUP========================================== */

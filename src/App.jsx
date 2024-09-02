@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // IMPORT DE PAGES
 import Home from "./pages/Home";
+import Offer from "./pages/Offer";
 import Signup from "./pages/Signup";
 
 // IMPORT DES COMPONENTS
@@ -17,6 +18,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/offers/:id" element={<Offer />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
