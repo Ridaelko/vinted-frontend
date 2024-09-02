@@ -54,7 +54,7 @@ const Offer = () => {
               })}
 
               <div className="user-info">
-                <p>{data.product_name} </p>
+                <p className="product-name">{data.product_name} </p>
                 <p>{data.product_description} </p>
                 <div className="user-av-name">
                   <img

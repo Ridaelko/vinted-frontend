@@ -98,16 +98,20 @@ img {
 .offers {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .offers > img {
-  width: 400px;
+  width: 500px;
+  height: 700px;
+  object-fit: cover;
 }
 
 .description {
-  width: 400px;
+  width: 300px;
   border: 1px solid black;
   padding: 40px;
+  font-size: 14px;
 }
 
 .description > p {
@@ -117,14 +121,38 @@ img {
 
 .key {
   display: flex;
-
-  gap: 150px;
+  gap: 30px;
 }
 
 .detail-key {
   width: 100px;
+  color: #9a9a9a;
 }
 
+.user-info {
+  margin-top: 200px;
+}
+
+.product-name {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.user-av-name {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.user-av-name p {
+  font-size: 18px;
+}
+
+.user-av-name img {
+  width: 50px;
+  border-radius: 50%;
+}
 /* =========================SIGNUP========================================== */
 
 .sign-form {
