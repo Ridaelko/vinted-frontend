@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -17,7 +18,7 @@ const Signup = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    setError(""); // on fait disparaître une éventuelle erreur
+    // setError(""); // on fait disparaître une éventuelle erreur
     try {
       const response = await axios.post(
         "https://lereacteur-vinted-api.herokuapp.com/user/signup",
@@ -36,13 +37,15 @@ const Signup = () => {
       navigate("/");
     } catch (error) {
       console.log("error ===>", error);
-      if (error.response.status === 409) {
-        setErrorMessage("Cet email est déjà utilisé");
-      } else if (error.response.data.message === "Missing parameters") {
-        setErrorMessage("Veuillez remplir tous les champs");
-      } else {
-        setErrorMessage("Une erreur est survenue, veuillez réessayer");
-      }
+
+      // J'AI MIS CA EN COMMENTAIRE CAR CA ME CREE DES ERREURS, JE VERRAI PLUS TARD
+      // if (error.response.status === 409) {
+      //   setErrorMessage("Cet email est déjà utilisé");
+      // } else if (error.response.data.message === "Missing parameters") {
+      //   setErrorMessage("Veuillez remplir tous les champs");
+      // } else {
+      //   setErrorMessage("Une erreur est survenue, veuillez réessayer");
+      // }
     }
   };
 
@@ -92,9 +95,11 @@ const Signup = () => {
           avoir au moins 18 ans.
         </p>
         <button type="submit">S'inscrire</button>
+        <Link to="/login">
+          <p className="to-login">Tu as déjà un compte ? Connecte-toi !</p>
+        </Link>
       </form>
-      {errorMessage && <p style={{ color: red }}>{error.message} </p>}
-      {/* <Link to="/login" >Tu as déjà un compte ? Connecte-toi !</Link> */}
+      {/* {errorMessage && <p style={{ color: red }}>{error.message} </p>} */}
     </div>
   );
 };

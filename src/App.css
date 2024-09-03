@@ -206,17 +206,24 @@ input {
   border-width: 20px;
 }
 
-form p {
+.checkbox + p {
   color: #999999;
   font-size: 12px;
   margin-bottom: 45px;
+  margin-top: 15px;
 }
 
-form button {
+.sign-form button {
   width: 275px;
   height: 45px;
   background-color: #2cb1ba;
   color: white;
   border: none;
   border-radius: 5px;
+}
+
+.to-login {
+  margin-top: 20px;
+  color: #2cb1ba;
+  padding-left: 20px;
 }
