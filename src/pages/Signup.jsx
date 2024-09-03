@@ -100,6 +100,7 @@ const Signup = () => {
         </Link>
       </form>
       {/* {errorMessage && <p style={{ color: red }}>{error.message} </p>} */}
+      {/* Je l'ai mis en commentaire car ça me donnait des erreurs, je verrai plus tard */}
     </div>
   );
 };

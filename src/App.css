@@ -109,7 +109,7 @@ img {
 
 .description {
   width: 300px;
-  border: 1px solid black;
+
   padding: 40px;
   font-size: 14px;
 }
@@ -226,4 +226,31 @@ input {
   margin-top: 20px;
   color: #2cb1ba;
   padding-left: 20px;
+}
+
+/* ===========================================LOGIN================================= */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form h1 {
+  font-size: 24px;
+  margin-bottom: 35px;
+  margin-top: 60px;
+}
+.login-form button {
+  border: none;
+  background-color: #2cb1ba;
+  color: white;
+  border-radius: 5px;
+  width: 275px;
+  height: 45px;
+}
+
+.login-form p {
+  margin-top: 30px;
+  color: #2cb1ba;
 }
