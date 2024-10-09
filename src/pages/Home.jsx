@@ -34,7 +34,7 @@ const Home = () => {
         <div className="container">
           {data.offers.map((offer) => {
             return (
-              <Link to={`/offers/${offer._id} `}>
+              <Link to={`/offers/${offer._id} `} key={offer._id}>
                 <article>
                   <div className="offer">
                     <div className="owner">

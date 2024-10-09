@@ -30,7 +30,7 @@ const Offer = () => {
   }, []);
 
   return loading ? (
-    "Chargement ..."
+    <p>"Chargement ..."</p>
   ) : (
     <main>
       <div className="container">

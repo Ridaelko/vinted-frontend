@@ -15,7 +15,9 @@ const Header = () => {
             <Link to="/login">
               <button className="white-but">Se connecter</button>
             </Link>
-            <button className="blue-but">Vends tes articles</button>
+            <Link to="/publish">
+              <button className="blue-but">Vends tes articles</button>
+            </Link>
           </div>
         </div>
       </div>

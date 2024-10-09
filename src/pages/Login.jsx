@@ -20,7 +20,7 @@ const Login = () => {
         }
       );
       console.log(response.data);
-      Cookies.set("vinted-token", response.data.token);
+      Cookies.set("token-vinted", response.data.token);
       navigate("/");
     } catch (error) {
       console.log("error ===>", error);

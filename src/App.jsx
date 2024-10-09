@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Offer from "./pages/Offer";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import Publish from "./pages/Publish";
 
 // IMPORT DES COMPONENTS
 import Header from "./components/Header";
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/offers/:id" element={<Offer />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/publish" element={<Publish />} />
         </Routes>
       </Router>
     </>
