@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Button from "../components/Button";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -94,7 +95,7 @@ const Signup = () => {
           Conditions et Politique de Confidentialité de Vinted. Je confirme
           avoir au moins 18 ans.
         </p>
-        <button type="submit">S'inscrire</button>
+        <Button text="S'incrire" type="submit" />
         <Link to="/login">
           <p className="to-login">Tu as déjà un compte ? Connecte-toi !</p>
         </Link>

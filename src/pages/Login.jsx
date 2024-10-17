@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate, Link } from "react-router-dom";
+import Button from "../components/Button";
+import Input from "../components/Input";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -39,6 +41,9 @@ const Login = () => {
             setEmail(event.target.value);
           }}
         />
+
+        <Input />
+
         <input
           type="password"
           placeholder="Mot de passe"
@@ -47,7 +52,7 @@ const Login = () => {
             setPassword(event.target.value);
           }}
         />
-        <button>Se connecter</button>
+        <Button type="submit" text="Se connecter" />
         <Link to="/signup">
           <p>Pas encore de compte ? Inscris-toi !</p>{" "}
         </Link>
