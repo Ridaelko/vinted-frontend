@@ -33,7 +33,7 @@ const Login = () => {
     <form onSubmit={handleSubmit}>
       <div className="login-form">
         <h1>Se connecter</h1>
-        <input
+        <Input
           type="email"
           placeholder="Adresse email"
           value={email}
@@ -42,9 +42,7 @@ const Login = () => {
           }}
         />
 
-        <Input />
-
-        <input
+        <Input
           type="password"
           placeholder="Mot de passe"
           value={password}
@@ -52,6 +50,7 @@ const Login = () => {
             setPassword(event.target.value);
           }}
         />
+
         <Button type="submit" text="Se connecter" />
         <Link to="/signup">
           <p>Pas encore de compte ? Inscris-toi !</p>{" "}

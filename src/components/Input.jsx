@@ -2,8 +2,8 @@ const Input = ({ type, placeholder, value, onChange }) => {
   return (
     <input
       type={type}
-      placeholder="Adresse email"
-      value={email}
+      placeholder={placeholder}
+      value={value}
       onChange={onChange}
     />
   );
