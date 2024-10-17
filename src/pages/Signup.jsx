@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
+import Input from "../components/Input";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -56,7 +57,7 @@ const Signup = () => {
         <h1>S'inscrire</h1>
       </div>
       <form onSubmit={handleSubmit}>
-        <input
+        <Input
           type="text"
           placeholder="Nom d'utilisateur"
           value={username}
@@ -64,7 +65,8 @@ const Signup = () => {
             setUsername(event.target.value);
           }}
         />
-        <input
+
+        <Input
           type="email"
           placeholder="Email"
           value={email}
@@ -72,7 +74,8 @@ const Signup = () => {
             setEmail(event.target.value);
           }}
         />
-        <input
+
+        <Input
           type="password"
           placeholder="Mot de passe"
           value={password}
@@ -81,13 +84,14 @@ const Signup = () => {
           }}
         />
         <div className="checkbox">
-          <input
+          <Input
             type="checkbox"
             value={newsletter}
-            onChange={() => {
-              setNewsletter(!newsletter);
+            onChange={(event) => {
+              setNewsletter(event.target.value);
             }}
           />
+
           <label>S'inscrire à notre newsletter</label>
         </div>
         <p>
