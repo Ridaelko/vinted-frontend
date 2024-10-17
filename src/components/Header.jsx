@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "./Button";
 
 const Header = () => {
   return (
@@ -10,13 +11,13 @@ const Header = () => {
           </Link>
           <div className="log-sign">
             <Link to="/signup">
-              <button className="white-but">S'inscrire</button>
+              <Button text="S'inscrire" className="white-but" />
             </Link>
             <Link to="/login">
-              <button className="white-but">Se connecter</button>
+              <Button text="Se connecter" className="white-but" />
             </Link>
             <Link to="/publish">
-              <button className="blue-but">Vends tes articles</button>
+              <Button text="Vends tes articles" className="blue-but" />
             </Link>
           </div>
         </div>
