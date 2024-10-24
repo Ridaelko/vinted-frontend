@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import Cookies from "js-cookie";
+import Input from "../components/Input";
 
 const Publish = () => {
   const [picture, setPicture] = useState(null);
@@ -51,13 +52,12 @@ const Publish = () => {
     <div>
       <h1>Vends ton article</h1>
       <form onSubmit={handleSubmit}>
-        <input
+        <Input
           type="file"
-          onChange={(event) => {
-            setPicture(event.target.files[0]);
-          }}
+          onChange={(event) => setPicture(event.target.value)}
         />
-        <input
+
+        <Input
           type="text"
           value={title}
           placeholder="ex: Chemise Sézane verte"
@@ -65,7 +65,8 @@ const Publish = () => {
             setTitle(event.target.value);
           }}
         />
-        <input
+
+        <Input
           type="text"
           value={description}
           placeholder="ex: porté quelque fois, taille correctement"
@@ -73,7 +74,8 @@ const Publish = () => {
             setDescription(event.target.value);
           }}
         />
-        <input
+
+        <Input
           type="text"
           value={brand}
           placeholder="ex: Zara"
@@ -81,7 +83,8 @@ const Publish = () => {
             setBrand(event.target.value);
           }}
         />
-        <input
+
+        <Input
           type="text"
           value={size}
           placeholder="ex: L/ 40 / 12"
@@ -89,7 +92,8 @@ const Publish = () => {
             setSize(event.target.value);
           }}
         />
-        <input
+
+        <Input
           type="text"
           value={color}
           placeholder="ex: Fushia"
@@ -97,7 +101,8 @@ const Publish = () => {
             setColor(event.target.value);
           }}
         />
-        <input
+
+        <Input
           type="text"
           value={condition}
           placeholder="Neuf avec étiquette"
@@ -105,7 +110,7 @@ const Publish = () => {
             setCondition(event.target.value);
           }}
         />
-        <input
+        <Input
           type="text"
           value={city}
           placeholder="ex: Paris"
