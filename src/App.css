@@ -298,3 +298,28 @@ input {
   border: 2px solid #d8d8da;
   padding: 20px;
 }
+
+.title,
+.description-article,
+.brand,
+.size,
+.color,
+.condition,
+.city,
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  color: black;
+}
+
+input {
+  border-bottom: 1px solid #edeeef;
+  width: 50%;
+}
+
+.exchange {
+  display: flex;
+}

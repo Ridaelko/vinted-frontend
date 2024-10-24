@@ -74,12 +74,12 @@ const Publish = () => {
             />
           </div>
 
-          <div className="description">
+          <div className="description-article">
             <Label text="Décris ton article" />
             <Input
               type="text"
+              placeholder="ex: porté quelque fois, taille M"
               value={description}
-              placeholder="ex: porté quelque fois, taille correctement"
               onChange={(event) => {
                 setDescription(event.target.value);
               }}
@@ -163,13 +163,14 @@ const Publish = () => {
 
           <div className="exchange">
             <Input
+              className="input-exchange"
               type="checkbox"
               value={acceptedExchange}
               onChange={(event) => {
-                setAcceptedExchange(event.target.value);
+                setAcceptedExchange(!acceptedExchange);
               }}
             />
-            <span>Je suis intéressé(e) par les échanges</span>
+            <p>Je suis intéressé(e) par les échanges</p>
           </div>
         </div>
 
