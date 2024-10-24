@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import Cookies from "js-cookie";
 import Input from "../components/Input";
+import Button from "../components/Button";
+import Label from "../components/Label";
 
 const Publish = () => {
   const [picture, setPicture] = useState(null);
@@ -60,23 +62,29 @@ const Publish = () => {
         </div>
 
         <div className="title-description">
-          <Input
-            type="text"
-            value={title}
-            placeholder="ex: Chemise Sézane verte"
-            onChange={(event) => {
-              setTitle(event.target.value);
-            }}
-          />
+          <div className="title">
+            <Label text="Titre" />
+            <Input
+              type="text"
+              value={title}
+              placeholder="ex: Chemise Sézane verte"
+              onChange={(event) => {
+                setTitle(event.target.value);
+              }}
+            />
+          </div>
 
-          <Input
-            type="text"
-            value={description}
-            placeholder="ex: porté quelque fois, taille correctement"
-            onChange={(event) => {
-              setDescription(event.target.value);
-            }}
-          />
+          <div className="description">
+            <Label text="Décris ton article" />
+            <Input
+              type="text"
+              value={description}
+              placeholder="ex: porté quelque fois, taille correctement"
+              onChange={(event) => {
+                setDescription(event.target.value);
+              }}
+            />
+          </div>
         </div>
 
         <div className="details">
@@ -147,7 +155,7 @@ const Publish = () => {
           </div>
         </div>
 
-        <Input type="submit" />
+        <Button type="submit" text="Ajouter" />
       </form>
     </div>
   );
