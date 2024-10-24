@@ -88,61 +88,79 @@ const Publish = () => {
         </div>
 
         <div className="details">
-          <Input
-            type="text"
-            value={brand}
-            placeholder="ex: Zara"
-            onChange={(event) => {
-              setBrand(event.target.value);
-            }}
-          />
+          <div className="brand">
+            <Label text="Marque" />
+            <Input
+              type="text"
+              value={brand}
+              placeholder="ex: Zara"
+              onChange={(event) => {
+                setBrand(event.target.value);
+              }}
+            />
+          </div>
+          <div className="size">
+            <Label text="Taille" />
+            <Input
+              type="text"
+              value={size}
+              placeholder="ex: L/ 40 / 12"
+              onChange={(event) => {
+                setSize(event.target.value);
+              }}
+            />
+          </div>
 
-          <Input
-            type="text"
-            value={size}
-            placeholder="ex: L/ 40 / 12"
-            onChange={(event) => {
-              setSize(event.target.value);
-            }}
-          />
+          <div className="color">
+            <Label text="Couleur" />
+            <Input
+              type="text"
+              value={color}
+              placeholder="ex: Fushia"
+              onChange={(event) => {
+                setColor(event.target.value);
+              }}
+            />
+          </div>
 
-          <Input
-            type="text"
-            value={color}
-            placeholder="ex: Fushia"
-            onChange={(event) => {
-              setColor(event.target.value);
-            }}
-          />
+          <div className="condition">
+            <Label text="Etat" />
+            <Input
+              type="text"
+              value={condition}
+              placeholder="Neuf avec étiquette"
+              onChange={(event) => {
+                setCondition(event.target.value);
+              }}
+            />
+          </div>
 
-          <Input
-            type="text"
-            value={condition}
-            placeholder="Neuf avec étiquette"
-            onChange={(event) => {
-              setCondition(event.target.value);
-            }}
-          />
-
-          <Input
-            type="text"
-            value={city}
-            placeholder="ex: Paris"
-            onChange={(event) => {
-              setCity(event.target.value);
-            }}
-          />
+          <div className="city">
+            <Label text="Lieu" />
+            <Input
+              type="text"
+              value={city}
+              placeholder="ex: Paris"
+              onChange={(event) => {
+                setCity(event.target.value);
+              }}
+            />
+          </div>
         </div>
 
         <div className="price-exchange">
-          <Input
-            type="number"
-            placeholder="ex: 25€"
-            value={price}
-            onChange={(event) => {
-              setPrice(event.target.value);
-            }}
-          />
+          <div className="price">
+            <Label text="Prix" />
+            <Input
+              type="number"
+              placeholder="ex: 25€"
+              value={price}
+              onChange={(event) => {
+                setPrice(event.target.value);
+              }}
+            />
+          </div>
+
           <div className="exchange">
             <Input
               type="checkbox"
