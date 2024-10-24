@@ -261,7 +261,7 @@ input {
 /* ===============================PUBLISH================================ */
 
 .file {
-  width: 1400px;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -271,7 +271,7 @@ input {
 }
 
 .title-description {
-  width: 1400px;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -281,7 +281,7 @@ input {
 }
 
 .details-publish {
-  width: 1400px;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -291,7 +291,7 @@ input {
 }
 
 .price-exchange {
-  width: 1400px;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
