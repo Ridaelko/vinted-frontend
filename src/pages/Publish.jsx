@@ -52,7 +52,9 @@ const Publish = () => {
 
   return (
     <div>
-      <h1>Vends ton article</h1>
+      <div className="h1-publish">
+        <h1>Vends ton article</h1>
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="file">
           <Input
@@ -174,7 +176,9 @@ const Publish = () => {
           </div>
         </div>
 
-        <Button type="submit" text="Ajouter" />
+        <div className="div-button-publish">
+          <Button className="button-publish" type="submit" text="Ajouter" />
+        </div>
       </form>
     </div>
   );
