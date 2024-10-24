@@ -58,6 +58,7 @@ const Publish = () => {
       <form onSubmit={handleSubmit}>
         <div className="file">
           <Input
+            className="input-publish"
             type="file"
             onChange={(event) => {
               setPicture(event.target.files[0]);
@@ -69,6 +70,7 @@ const Publish = () => {
           <div className="title">
             <Label text="Titre" />
             <Input
+              className="input-publish"
               type="text"
               value={title}
               placeholder="ex: Chemise Sézane verte"
@@ -81,6 +83,7 @@ const Publish = () => {
           <div className="description-article">
             <Label text="Décris ton article" />
             <Input
+              className="input-publish"
               type="text"
               placeholder="ex: porté quelque fois, taille M"
               value={description}
@@ -95,6 +98,7 @@ const Publish = () => {
           <div className="brand">
             <Label text="Marque" />
             <Input
+              className="input-publish"
               type="text"
               value={brand}
               placeholder="ex: Zara"
@@ -106,6 +110,7 @@ const Publish = () => {
           <div className="size">
             <Label text="Taille" />
             <Input
+              className="input-publish"
               type="text"
               value={size}
               placeholder="ex: L/ 40 / 12"
@@ -118,6 +123,7 @@ const Publish = () => {
           <div className="color">
             <Label text="Couleur" />
             <Input
+              className="input-publish"
               type="text"
               value={color}
               placeholder="ex: Fushia"
@@ -130,6 +136,7 @@ const Publish = () => {
           <div className="condition">
             <Label text="Etat" />
             <Input
+              className="input-publish"
               type="text"
               value={condition}
               placeholder="Neuf avec étiquette"
@@ -142,6 +149,7 @@ const Publish = () => {
           <div className="city">
             <Label text="Lieu" />
             <Input
+              className="input-publish"
               type="text"
               value={city}
               placeholder="ex: Paris"
@@ -156,6 +164,7 @@ const Publish = () => {
           <div className="price">
             <Label text="Prix" />
             <Input
+              className="input-publish"
               type="number"
               placeholder="ex: 25€"
               value={price}

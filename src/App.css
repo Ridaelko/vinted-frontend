@@ -320,7 +320,7 @@ label {
   color: black;
 }
 
-input {
+.input-publish {
   border-bottom: 1px solid #edeeef;
   width: 50%;
 }
