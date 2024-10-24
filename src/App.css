@@ -257,3 +257,44 @@ input {
   margin-top: 30px;
   color: #2cb1ba;
 }
+
+/* ===============================PUBLISH================================ */
+
+.file {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #d8d8da;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.title-description {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #d8d8da;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.details {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #d8d8da;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.price-exchange {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #d8d8da;
+  padding: 20px;
+}

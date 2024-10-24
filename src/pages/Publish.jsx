@@ -52,82 +52,100 @@ const Publish = () => {
     <div>
       <h1>Vends ton article</h1>
       <form onSubmit={handleSubmit}>
-        <Input
-          type="file"
-          onChange={(event) => setPicture(event.target.files[0])}
-        />
+        <div className="file">
+          <Input
+            type="file"
+            onChange={(event) => setPicture(event.target.files[0])}
+          />
+        </div>
 
-        <Input
-          type="text"
-          value={title}
-          placeholder="ex: Chemise Sézane verte"
-          onChange={(event) => {
-            setTitle(event.target.value);
-          }}
-        />
+        <div className="title-description">
+          <Input
+            type="text"
+            value={title}
+            placeholder="ex: Chemise Sézane verte"
+            onChange={(event) => {
+              setTitle(event.target.value);
+            }}
+          />
 
-        <Input
-          type="text"
-          value={description}
-          placeholder="ex: porté quelque fois, taille correctement"
-          onChange={(event) => {
-            setDescription(event.target.value);
-          }}
-        />
+          <Input
+            type="text"
+            value={description}
+            placeholder="ex: porté quelque fois, taille correctement"
+            onChange={(event) => {
+              setDescription(event.target.value);
+            }}
+          />
+        </div>
 
-        <Input
-          type="text"
-          value={brand}
-          placeholder="ex: Zara"
-          onChange={(event) => {
-            setBrand(event.target.value);
-          }}
-        />
+        <div className="details">
+          <Input
+            type="text"
+            value={brand}
+            placeholder="ex: Zara"
+            onChange={(event) => {
+              setBrand(event.target.value);
+            }}
+          />
 
-        <Input
-          type="text"
-          value={size}
-          placeholder="ex: L/ 40 / 12"
-          onChange={(event) => {
-            setSize(event.target.value);
-          }}
-        />
+          <Input
+            type="text"
+            value={size}
+            placeholder="ex: L/ 40 / 12"
+            onChange={(event) => {
+              setSize(event.target.value);
+            }}
+          />
 
-        <Input
-          type="text"
-          value={color}
-          placeholder="ex: Fushia"
-          onChange={(event) => {
-            setColor(event.target.value);
-          }}
-        />
+          <Input
+            type="text"
+            value={color}
+            placeholder="ex: Fushia"
+            onChange={(event) => {
+              setColor(event.target.value);
+            }}
+          />
 
-        <Input
-          type="text"
-          value={condition}
-          placeholder="Neuf avec étiquette"
-          onChange={(event) => {
-            setCondition(event.target.value);
-          }}
-        />
+          <Input
+            type="text"
+            value={condition}
+            placeholder="Neuf avec étiquette"
+            onChange={(event) => {
+              setCondition(event.target.value);
+            }}
+          />
 
-        <Input
-          type="text"
-          value={city}
-          placeholder="ex: Paris"
-          onChange={(event) => {
-            setCity(event.target.value);
-          }}
-        />
+          <Input
+            type="text"
+            value={city}
+            placeholder="ex: Paris"
+            onChange={(event) => {
+              setCity(event.target.value);
+            }}
+          />
+        </div>
 
-        <Input
-          type="number"
-          placeholder="ex: 25€"
-          value={price}
-          onChange={(event) => {
-            setPrice(event.target.value);
-          }}
-        />
+        <div className="price-exchange">
+          <Input
+            type="number"
+            placeholder="ex: 25€"
+            value={price}
+            onChange={(event) => {
+              setPrice(event.target.value);
+            }}
+          />
+          <div className="exchange">
+            <Input
+              type="checkbox"
+              value={acceptedExchange}
+              onChange={(event) => {
+                setAcceptedExchange(event.target.value);
+              }}
+            />
+            <span>Je suis intéressé(e) par les échanges</span>
+          </div>
+        </div>
 
         <Input type="submit" />
       </form>
