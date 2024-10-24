@@ -124,7 +124,9 @@ const Publish = () => {
           type="number"
           placeholder="ex: 25€"
           value={price}
-          onChange={(event) => setPrice(event.targer.value)}
+          onChange={(event) => {
+            setPrice(event.target.value);
+          }}
         />
 
         <Input type="submit" />
