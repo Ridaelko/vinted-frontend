@@ -59,7 +59,9 @@ const Publish = () => {
         <div className="file">
           <Input
             type="file"
-            onChange={(event) => setPicture(event.target.files[0])}
+            onChange={(event) => {
+              setPicture(event.target.files[0]);
+            }}
           />
         </div>
 
