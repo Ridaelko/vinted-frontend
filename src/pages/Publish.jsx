@@ -110,6 +110,7 @@ const Publish = () => {
             setCondition(event.target.value);
           }}
         />
+
         <Input
           type="text"
           value={city}
@@ -118,7 +119,8 @@ const Publish = () => {
             setCity(event.target.value);
           }}
         />
-        <input type="submit" />
+
+        <Input type="submit" />
       </form>
     </div>
   );
