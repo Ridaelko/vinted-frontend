@@ -54,7 +54,7 @@ const Publish = () => {
       <form onSubmit={handleSubmit}>
         <Input
           type="file"
-          onChange={(event) => setPicture(event.target.value)}
+          onChange={(event) => setPicture(event.target.files[0])}
         />
 
         <Input
@@ -118,6 +118,13 @@ const Publish = () => {
           onChange={(event) => {
             setCity(event.target.value);
           }}
+        />
+
+        <Input
+          type="number"
+          placeholder="ex: 25€"
+          value={price}
+          onChange={(event) => setPrice(event.targer.value)}
         />
 
         <Input type="submit" />
