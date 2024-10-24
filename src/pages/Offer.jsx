@@ -43,10 +43,8 @@ const Offer = () => {
                 const keys = Object.keys(detail);
                 const key = keys[0];
                 return (
-                  <div className="key">
-                    <p className="detail-key" key={index}>
-                      {key}
-                    </p>
+                  <div className="key" key={index}>
+                    <p className="detail-key">{key}</p>
 
                     <p className="to-justify">{detail[key]} </p>
                   </div>
