@@ -89,7 +89,7 @@ const Publish = () => {
           </div>
         </div>
 
-        <div className="details">
+        <div className="details-publish">
           <div className="brand">
             <Label text="Marque" />
             <Input
