@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import Label from "../components/Label";
 
-const navigate = useNavigate();
+// const navigate = useNavigate();
 
 const Publish = () => {
   const [picture, setPicture] = useState(null);
@@ -48,7 +48,7 @@ const Publish = () => {
         }
       );
       // console.log(response);
-      navigate("/");
+      // navigate("/");
     } catch (error) {
       console.log("error =>", error);
     }

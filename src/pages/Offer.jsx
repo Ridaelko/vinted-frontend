@@ -35,7 +35,20 @@ const Offer = () => {
     <main>
       <div className="container">
         <div className="offers">
-          <img src={data.product_image.secure_url} alt={data.product_name} />
+          {data.product_pictures.length === 0 ? (
+            <img
+              className="offer-picture"
+              src={data.product_image.secure_url}
+              alt={data.product_name}
+            />
+          ) : (
+            <img
+              className="offer-picture"
+              src={data.product_pictures[0].secure_url}
+              alt={data.product_name}
+            />
+          )}
+
           <div className="description">
             <p>{data.product_price}€ </p>
             <div className="info">
@@ -53,7 +66,8 @@ const Offer = () => {
 
               <div className="user-info">
                 <p className="product-name">{data.product_name} </p>
-                <p>{data.product_description} </p>
+                {data.product_description && <p>{data.product_description} </p>}
+
                 <div className="user-av-name">
                   <img
                     src={data.owner.account.avatar.secure_url}
