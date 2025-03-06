@@ -47,6 +47,7 @@ const Home = () => {
 
                       <p>{offer.owner.account.username} </p>
                     </div>
+
                     <img
                       className="picture-article"
                       src={offer.product_image.url}
